@@ -1,0 +1,376 @@
+*{
+	box-sizing: border-box;
+
+}
+body{
+	font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1
+
+}
+.header{
+	text-align: center;
+	padding: 20px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+.topMenu{
+	overflow: hidden;
+	background-color: black;
+}
+.topMenu a{
+	display: block;
+	float: left;
+	text-decoration: none;
+	padding: 12px;
+	color: white;
+}
+.topMenu a:hover{
+	color: blue;
+	background-color: silver;
+}
+.leftcolumn{
+	float: left;
+	width: 75%;
+}
+.rightcolumn{
+	float: right;
+	width: 25%;
+	padding-left: 10px;
+}
+/*.img_test{
+	background-image: url("img/voda_1.jpg");
+	width: 100%;
+	padding: 20px;
+	background-color: #aaa;
+	height: 150px;
+}*/
+.img_test_2{
+	width: 100%;
+	padding: 20px;
+	background-color: #aaa;
+	height: 100px;
+}
+.columnDuble{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+/*.img_test_two{
+	background-image: url("img/stylecss.jpeg");
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    height: 150px;
+}*/
+.footer{
+	position: static;
+	width: 100%;
+	height: 200px;;
+	padding: 10px;
+	background-color: white;
+
+
+}
+.foterContent{
+	color: blue;
+	float: left;
+	margin: 15px;
+	width: 350px;
+}
+
+
+@media screen and (max-width: 800px){
+	.leftcolumn, .rightcolumn{
+		width: 100%;
+		padding: 0;
+	} 
+}
+#carousel{
+	height: 100%;
+	width: 100%;
+	margin: 1px;
+}
+.jumbotron{
+	padding: 1rem 2rem;
+	margin: 0;
+	padding: 0;
+}
+.carouselImage{
+	width: 100%;
+	height: 250px;
+}
+.carousel-control-prev-icon:hover{
+	background-color: red;
+	height: 50px;
+}
+.carousel-control-next-icon:hover{
+	background-color: red;
+	height: 50px;
+}
+.contentGrid{
+	display: grid;
+/*	background-color: green;*/
+	grid-template-columns: auto auto auto auto auto;
+	grid-gap: 5px;
+	padding-top: 1px;
+/*	margin-top: 1px;*/
+}
+.contentGrid>div{
+	text-align: center;
+	border: solid black 2px;
+	background-color:  #42f4eb;
+	margin: 0px;
+	padding: 20px;
+}
+.brendContent{
+	padding: 10px;
+	color: blue;
+}
+.contentGrid>div:hover{
+	background-color: silver;
+}
+.headLogo{
+	float: left;
+/*	padding: 10px;*/
+}
+.sizeLofo{
+	height: 130px;
+	width: 150px;
+	border-radius: 16px;
+}
+.raightHeadReg{
+	float: right;
+	/* background-color: red; */
+	height: 130px;
+	width: 350px;
+}
+.imgDelivery{
+	height: 520px;
+	width: 100%;
+	padding: 20px;
+}
+.formRegistration{
+	background-color: #e5eecc;
+	padding: 20px;
+	/*text-align: justify;*/
+}
+.menukatalog{
+	position: relative;
+}
+.menukatalogsmall{
+	position: absolute;
+	width: 250px;
+	left: 0px;
+	background-color: #42f4eb;
+	
+}
+.menukatalogbigger{
+	/* display: none; */
+	margin-left: 250px;
+}
+.menusmall{
+	padding: 10px;
+	margin: 1px;
+	border-radius: 3px;
+}
+.menusmall>a{
+	text-decoration: none;
+	font-size: 20px;
+	list-style: none;
+
+}
+.menusmall>a:hover{
+	text-decoration: underline;
+	color: white;
+	}
+
+.fotoContent{
+	/* float: left; */
+/*	display: grid;
+	grid-template-rows: 150px 150px auto auto;*/
+	width: 250px;
+	height: 320px;
+	padding: 5px;
+	margin: 10px;
+}
+.contentBanka{
+	float: right;
+	width: 1300px;
+	height: 310px;
+	padding: 17px;
+	margin: 15px;
+	background-color: white;
+}
+.bankaKilkist p{
+	color: darkgoldenrod;
+}
+.bankaKilkist{
+	float: right;
+	margin-top: 80px;
+	margin-right: 120px;	
+	padding: 2px;
+}
+.bankaKilkistSize{
+	padding: 10px;
+	text-align: center;
+	background-color: chocolate;
+	border-radius: 5px;
+}
+.contentBankaOpus{
+	width: 600px;
+}
+.zagolovok_opus{
+	text-align: center;
+	margin: 10px;
+	font-size: 50px;
+	width: 100%;
+}
+.addresMap{
+	margin: 10px;
+	padding-left: 20px;
+}
+#clientComments{
+	padding: 45px 30px;	
+}
+.commentsButton{
+	background-color: #aaa;
+	border-radius: 6px;
+	font-size: 25px;
+}
+#showWindow, #showWindow_regisrtation, #showWindow_reg_form{
+	width: auto;
+	height: auto;
+	border-radius: 10px;
+	background-color: skyblue;
+	display: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+.showMenu div{
+	display: none;
+	color: olivedrab;
+	font-size: 16px;
+}
+.showMenu a{
+	font-size: 33px;
+}
+#showWindow_reg_form:target{
+	display: block;
+}
+#showWindow:target{
+	display: block;
+}
+#showWindow_regisrtation:target{
+	display: block;
+}
+.showMenu div:target{
+	display: block;
+}
+
+.closeWindow{
+	border-radius: 2px solid blue;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	background-color: yellow;
+/*	cursor: pointer;*/
+	margin: 10px;
+	padding: 1px;
+}
+.formComments{
+	margin: 10px;
+	padding: 10px;
+}
+
+#clientComments>a{
+	text-decoration: none;
+	font-size: 25px;
+	
+	padding: 0px;
+	
+}
+#zamovlenjaVodu{
+	border-radius: 6px;
+	padding: 2px;
+}
+#aboutCompany{
+	/* display: none; */
+	font-size: 20px;
+
+}
+
+
+.leftImg{
+	float: right;
+	width: 360px;
+	height: 240px;
+	margin-left: 30px;
+}
+.opCompany{
+	color: red;
+	font-size: 18px;
+	font-style: italic;
+}
+.columnRK{
+	color: green;
+	border-radius: 2px solid blue;
+	width: 70%;
+	float:right;
+	font-size: 20px;
+}
+.columnPK{
+	color: rgb(142, 165, 42);
+	width: 50%;
+	
+}
+/* .discountCompany{
+	margin-top: 13px;
+	background-color: white;
+	text-align: center;
+	padding: 18px;
+	font-size: 28px;
+}
+.discountClient{
+	width: 50%;
+	background-color: green;
+	float: left;
+	padding: 18px;
+	text-align: center;
+	margin-top: 4px;
+}
+.discountNewClient{
+	background-color: blueviolet;
+	width: 50%;
+	float: right;
+	padding: 18px;
+	text-align: center;
+	margin-top: 4px;
+} */
+.gridContDiscount{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: 100px 60px auto;
+	background-color: silver;
+	/* grid-gap: 5px; */
+	padding: 5px;
+
+}
+.gridContDiscount>div{
+	text-align: center;
+	background-color: white;
+	/* padding: 20px; */
+
+}
+.gridCont1{
+	grid-column: 1 / span 2;
+	grid-row: 1;
+}
+.gridContDiscount p{
+color: purple;
+text-decoration: underline;
+font-size: 27px;
+padding-bottom: 3px;
+}

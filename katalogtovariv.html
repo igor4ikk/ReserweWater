@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<title>My Website</title>
+</head>
+<body>
+	<div class="headLogo">
+		<img class="sizeLofo" src="img/aqua.png">
+	</div>	
+
+	<div class="raightHeadReg" id ="clientComments" >
+			<a href="#showWindow_regisrtation" id="zamColor" >Оформити замовлення</a>
+			<a href="#showWindow_reg_form">Зареєструвати</a>
+
+			<div id ="showWindow_regisrtation" >
+				<form>
+					<h1> Форма реєстрації замовлення.</h1><br>
+					Ваще ымя:<br><input type="text" name="your name" required placeholder="name"><br>
+					Тел:<br><input type="tel" name="yourPhone" maxlength="10" required placeholder="phone"><br>
+					К-сть:<br><input type="number" name="yourKilkist" min="1" max="20"><br>
+					Мысто:<br><select name="choiseCity" required >
+						<option>Львів</option>
+						<option>Київ</option>
+						<option>Одеса</option>
+						<option>Харків</option>
+						<option>Чернігів</option>
+						<option>Миколаїв</option>
+						<option>Херсон</option>
+					</select> <br>
+					Вулиця:<br><input type="text" name="yourStreet" placeholder ="назва, номер буд/кв" required><br><br>
+					Дата:<input type="date" name="yourStreet"><br><br>
+					<input type="submit" value="Оформити">&nbsp;
+					<input type="reset" value="Оновити">&nbsp;
+					<a href="#" class="closeWindow">Закрити</a>
+				</form>
+			</div>
+			<div id ="showWindow_reg_form">
+				<form>
+					<h3> Форма реєстрації замовлення.</h3><br>
+					Name:<input type="text" name="your name" required placeholder="ваше імя"><br><br>
+					Email:<input type="email" name="yourEmail" required placeholder="ваш email"><br><br>
+					Login:<input type="text" name="yourSurname" required><br><br>
+					Password:<input type="password" name="telNamber" required><br><br>
+					<input type="submit" value="Зареєструвати">&nbsp;
+					<input type="reset" value="Оновити">&nbsp;
+					<a href="#" class="closeWindow">Закрити</a>
+				</form>
+			</div>
+	</div>	
+
+<!-- ЗАГОЛОВОК		 -->
+<div class="header">
+	<h1>Доставка питної води</h1>
+	<p>При скролі мишою міняєм розмір сайту</p>
+</div>
+
+
+		
+<!-- СТОРКА МЕНЮ		 -->
+<div class="topMenu">
+		<a href="index.html">Головна</a>
+		<a href="aboutCompany.html">Про компанію</a>
+		<a href="katalogtovariv.html">Каталог товарів</a>
+		<a href="dostavka.html">Доставка</a>
+		<a href="discount.html">Акції</a>
+	</div>
+
+
+	<div class="menukatalog">
+		<div class="menukatalogsmall">
+			<div class="menusmall"><a href="#clickShowPompa">Помпа</a></div>
+			<div class="menusmall"><a href="#clickShowBanka">Вода в бутлях</a></div>
+			<div class="menusmall"><a href="#clickShowSklo">Вода в пляшках</a></div>
+			<div class="menusmall"><a href="#clickShowCooler">Кулери</a></div>
+			<div class="menusmall"><a href="#clickShowFilter">Очисні фільтра</a></div><hr>
+			<div class="menusmall">
+				<h3>Сортувати по:</h3>
+				<p>Оренда/купівля:</p>
+				<select>
+					<option value="choise">Виберіть</option>
+					<option value="orend">Оренда</option>
+					<option value="buy">Купівля</option>
+				</select><br><br>
+				<p>Тип обладнання:</p>
+				<select>
+					<option value="choise">Виберіть</option>
+					<option value="pompa">помпа</option>
+					<option value="banka">бутлях</option>
+					<option value="bottle">пляшках</option>
+					<option value="cooler">кулери</option>
+					<option value="filter">фільтра</option>
+				</select><br><br>
+				<p>Ціна</p>
+				<input type="checkbox" name="price1" value="checkPrice1"> 0 - 50<br>
+				<input type="checkbox" name="price2" value="checkPrice2"> 50 - 100<br>
+				<input type="checkbox" name="price3" value="checkPrice3"> 100 - 150<br>
+				<input type="checkbox" name="price4" value="checkPrice4"> 150 - 450<br>
+				<input type="checkbox" name="price5" value="checkPrice5"> 450 - 1050<br>
+				<input type="button" value="Пошук" name="send">
+			</div>
+		</div>
+		
+	</div>
+
+
+		<div class="menukatalogbigger">
+<!--Вода у бутлях-->
+		<div id = "clickShowBanka">	
+			<img class="fotoContent" src="img/banka_1.jpg">
+				<div class="contentBanka">
+						<div class="bankaKilkist">
+							<p> Ціна 50 грн.<br> (з доставкою)</p>
+							<form name = "form" onsubmit="return name1()">
+								Кіл-ть:&nbsp<input type="number" name="name" id="men" class="checkNumIn" max="5" min="1"> &nbsp;	&nbsp;	
+								<input class="bankaKilkistSize" type="submit"   value="Добавити в корзину">	
+							</form>
+						</div>
+						<div class="showMenu">
+							<a href="#prAljaska">Бутильована питна вода «Аляска»</a>
+							<div id = "prAljaska">
+							Загальна жорсткість: 120vv<br>
+							Обєм: 19 лт<br>
+							Хлориди: 250 м2<br>
+							Сульфати: 350 мб/пр<hr>
+							</div>
+						</div>
+						<p class="contentBankaOpus">Артезіанська питна вода «Кришталь», видобувається із свердловини в с.Угринів Сокальського р-ну,
+							 Львівської області, що знаходиться на відстані 110 км від м. Львова. Вода проходить постійне тестування і відповідає існуючим стандартам якості.<br><br>					
+						</p>										
+				</div>
+
+			<img class="fotoContent" src="img/banka_2.jpg">
+				<div class="contentBanka">
+					<div class="bankaKilkist">
+						<p> Ціна 55 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+						<a href="#prMorshin">Бутильована питна вода «Моршинська»</a>
+						<div id = "prMorshin">
+							Загальна жорсткість: 55vv<br>
+							Обєм: 30 лт<br>
+							Хлориди: 5 м2<br>
+							Сульфати: 10 мб/пр<hr>
+						</div>
+					</div>	
+						<p class="contentBankaOpus">Моршинська вода є джерельною водою — однією із найцінніших серед природних вод. Вона самотужки прокладає собі шлях на поверхню землі і б’є природними джерелами на території курортної зони у букових лісах.<br><br>					
+							</p>									
+			</div>
+		
+			
+			<img class="fotoContent" src="img/banka_3.jpeg">
+				<div class="contentBanka">
+				<div class="bankaKilkist">
+						<p>Ціна 60 грн.<br> (з доставкою)</p>
+					Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+					<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+				</div>
+				<div class="showMenu">
+				<a href="#prOazis">Оазіс- це чиста вода для вашого здоровя</a><br>
+					<div id = "prOazis">
+					Загальна жорсткість: 55vv<br>
+					Обєм: 30 лт<br>
+					Хлориди: 5 м2<br>
+					Сульфати: 10 мб/пр<hr>
+					</div>
+				</div>
+					<p class="contentBankaOpus">Артезіанська питна вода «Кришталь», видобувається із свердловини в с.Угринів Сокальського р-ну,
+						 Львівської області, що знаходиться на відстані 110 км від м. Львова. Вода проходить постійне тестування і відповідає існуючим стандартам якості.<br><br>					
+						 </p>
+				</div>
+			</div>		
+			
+<!--Вода в пляшках -->
+		<div id="clickShowSklo">	
+			<img class="fotoContent" src="img/bankaSklo_1.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 25 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#bottleMorshin">"Моршинська" - вода в склотарі.</a><br>
+						<div id = "bottleMorshin">
+						Загальна жорсткість: 55vv<br>
+						Обєм: 0,5 лт<br>
+						Хлориди: 1.2 м2<br>
+						Сульфати: 3 мб/пр<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Артезіанська питна вода «Кришталь», видобувається із свердловини в с.Угринів Сокальського р-ну,
+							 Львівської області, що знаходиться на відстані 110 км від м. Львова. Вода проходить постійне тестування і відповідає існуючим стандартам якості.<br><br>					
+							 </p>
+					</div>
+			<img class="fotoContent" src="img/bankaSklo_2.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 25 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#bottleBorgomi">"Боржомі" - найкраща для вашого організму.</a><br>
+						<div id = "bottleBorgomi">
+						Загальна жорсткість: 55vv<br>
+						Обєм: 0,5 лт<br>
+						Хлориди: 1.2 м2<br>
+						Сульфати: 3 мб/пр<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Артезіанська питна вода «Кришталь», видобувається із свердловини в с.Угринів Сокальського р-ну,
+							 Львівської області, що знаходиться на відстані 110 км від м. Львова. Вода проходить постійне тестування і відповідає існуючим стандартам якості.<br><br>					
+							 </p>
+					</div>
+			<img class="fotoContent" src="img/bankaSklo_3.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 25 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#bottleColyki">"Солуки" - поживні речовини тільки тут..</a><br>
+						<div id = "bottleColyki">
+						Загальна жорсткість: 55vv<br>
+						Обєм: 0,5 лт<br>
+						Хлориди: 1.2 м2<br>
+						Сульфати: 3 мб/пр<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Артезіанська питна вода «Кришталь», видобувається із свердловини в с.Угринів Сокальського р-ну,
+							 Львівської області, що знаходиться на відстані 110 км від м. Львова. Вода проходить постійне тестування і відповідає існуючим стандартам якості.<br><br>					
+							 </p>
+					</div>
+				</div>		
+
+<!--Контент про Кулер-->				
+		<div id="clickShowCooler">			
+			<img class="fotoContent" src="img/cooler_1.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 1500 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#firstCyler">Кулер настільний з опцією охолодження</a><br>
+						<div id = "firstCyler">
+						Вода: гаряча/холодна<br>
+						Обєм: 30 лт<br>
+						Потужність підігріву: 500 Вт<br>
+						Потужність охолодження: 100 Вт<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Компактний настільний кулер, виконаний у витончених габаритах і синьо-білій/білій колірній гамі.</p>
+					</div>
+			<img class="fotoContent" src="img/cooler_2.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 699 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#secondCyler">Кулер для води HotFrost D75E </a><br>
+						<div id = "secondCyler">
+						Вода: гаряча/холодна<br>
+						Обєм: 30 лт<br>
+						Потужність підігріву: 500 Вт<br>
+						Потужність охолодження: 100 Вт<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Новинка в ассортименті кулерів HotFrost в ряду настольних моделей с электронним охолодженям - кулер D75E.
+							 Виповнена модель в класичному білому колері с приємно голубими вставками </p>
+					</div>
+			<img class="fotoContent" src="img/cooler_3.jpeg">
+			<div class="contentBanka">
+				<div class="bankaKilkist">
+						<p>Ціна 890 грн.<br> (з доставкою)</p>
+					Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+					<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+				</div>
+				<div class="showMenu">
+				<a href="#threeCyler">Кулер високий з шафкою HotFrost V115CE </a><br>
+					<div id = "threeCyler">
+					Вода: гаряча/холодна<br>
+					Обєм: 30 лт<br>
+					Потужність підігріву: 500 Вт<br>
+					Потужність охолодження: 100 Вт<hr>
+					</div>
+				</div>
+					<p class="contentBankaOpus">Кулер представлений в традиційному білому кольорі. Особливу елегантність і строгість даної моделі надає
+						s вставка темно-сірого кольору в зоні роздачі води. Вмістка шафка на (19л) в нижній частині кулера для чаю, кави, цукру і одноразового посуду!</p>
+				</div>
+			</div>
+			
+			
+<!--Контент Помпа-->		
+			<div id="clickShowPompa">
+			<img class="fotoContent" src="img/pompa_1.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 190 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#firstPompa">Помпа механічна, «Lilu»</a><br>
+						<div id = "firstPompa">
+						Вода: гаряча/холодна<br>
+						Обєм: 30 лт<br>
+						Потужність підігріву: 500 Вт<br>
+						Потужність охолодження: 100 Вт<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Механічний ручний насос для бутильованої питної води. Насос підходить для використання на стандартних 
+							полікарбонатних бутлях об’ємом 18,9л. Продукт виготовлено з якісних харчових матеріалів, що робить його використання безпечним та надійним</p>
+					</div>
+			<img class="fotoContent" src="img/pompa_2.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 230 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#secondPompa">Помпа механічна, "Blue-Rain"</a><br>
+						<div id = "secondPompa">
+						Вода: гаряча/холодна<br>
+						Обєм: 30 лт<br>
+						Потужність підігріву: 500 Вт<br>
+						Потужність охолодження: 100 Вт<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Зручна і надійна механічна помпа. Помпа для води має прозорий корпус, 
+							довговічну пружину, а також вбудований механічний промивний фільтр для повітря. Легкий хід, середні порції води.</p>
+					</div>
+			<img class="fotoContent" src="img/pompa_3.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 340 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#threePompa">Помпа механічна "Dolphin" </a><br>
+						<div id = "threePompa">
+						Вода: гаряча/холодна<br>
+						Обєм: 30 лт<br>
+						Потужність підігріву: 500 Вт<br>
+						Потужність охолодження: 100 Вт<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Довговічна та надійна у користуванні. До бутля кріпиться спеціальним зажимом із різьбою. Оснащена пружиною, великі порції води.</p>
+					</div>
+			</div>		
+
+<!--Контент ФІЛЬТРІВ-->			
+			<div id="clickShowFilter">
+			<img class="fotoContent" src="img/filter_1.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 90 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#firstFilter">Бар’єр Гранд – синього кольору, фільтр для води" </a><br>
+						<div id = "firstFilter">
+						Обсяг глечика 4,0 літрів<br>
+						Обсяг очищеної води 1,8 літрів<br>
+						Комплектується змінним модулем Бар’єр Стандарт №4. Ресурс модуля 350 л<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Гранд призначений для доочистки питної води, ефективно очищає воду від активного хлору, органічних і неорганічних сполук, 
+							іонів важких металів та інших забруднень. Усуває неприємний запах і присмак води.</p>
+					</div>
+			<img class="fotoContent" src="img/filter_2.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 90 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#secondFilter">Бар’єр Норма – синього кольору </a><br>
+						<div id = "secondFilter">
+						Обсяг глечика 4,0 літрів<br>
+						Обсяг очищеної води 1,8 літрів<br>
+						Комплектується змінним модулем Бар’єр Стандарт №4. Ресурс модуля 350 л<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Фільтр-глечик Бар’єр Норма призначений для доочистки питної води, ефективно очищає воду від активного хлору, органічних і
+							 неорганічних сполук, іонів важких металів та інших забруднень. Усуває неприємний запах і присмак води.</p>
+					</div>
+			<img class="fotoContent" src="img/filter_3.jpeg">
+			<div class="contentBanka">
+					<div class="bankaKilkist">
+							<p>Ціна 358 грн.<br> (з доставкою)</p>
+						Кіл-ть:&nbsp<input type="number">&nbsp;	&nbsp;	
+						<input class="bankaKilkistSize" type="button" value="Добавити в корзину">	
+					</div>
+					<div class="showMenu">
+					<a href="#threeFilter">Фільтр-глечик Аквафор Престиж </a><br>
+						<div id = "threeFilter">
+						Обсяг глечика 4,0 літрів<br>
+						Обсяг очищеної води 1,8 літрів<br>
+						Комплектується змінним модулем Бар’єр Стандарт №4. Ресурс модуля 350 л<hr>
+						</div>
+					</div>
+						<p class="contentBankaOpus">Глечик Аквафор Престиж  – зручний фільтр глечик для води завдяки використанню унікальних волокнистих сорбційних матеріалів марки Аквален® в комбінації з кращими марками активованого вугілля, фільтр-глечик надійно та безповоротно затримує не тільки органічні сполуки,
+							 залізо та важкі метали, але й інші шкідливих домішок, а також зменшує надлишкову жорсткість води та утворенню накипу.</p>
+					</div>
+				</div>	
+		</div>
+		
+<!--Контент ФУТЕР-->
+	
+	<div class="footer">
+			<div class="foterContent"><h3>Про компанію</h3>
+				<a href="#">Про нас</a><br>
+				<a href="#"> Новини</a><br>
+				<a href="#"> Виробництво</a><br>
+				<a href="#">Вода</a><br>
+				<a href="#">Контакти</a><br>
+				
+			</div>
+			<div class="foterContent"><h3>Покупцям</h3>
+				<a href="#">Доставка</a><br>
+				<a href="#">Оплата</a><br>
+				<a href="#">Повернення товару</a><br>
+				<a href="#">Програма лояльності</a><br>
+				<a href="#">Питання і відповіді</a><br>
+			</div>
+			<div class="foterContent"><h3>Сервіс</h3>
+				<a href="#">Сервіс та обслуговування</a><br>
+				<a href="#">Залишити відгуки</a><br>
+				<a href="#">Конфіденційність</a><br>
+			</div>
+			<div class="foterContent"><h2>0 800 30 560 32</h2></div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="jquery_form.js"></script>
+</body>
+</html>
